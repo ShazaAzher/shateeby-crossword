@@ -1,0 +1,90 @@
+/* Basic styling for the crossword */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f6e5e5;  /* Soft pink background */
+    color: #5c7a65;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+    color: #f7b2b2;  /* Light pink for title */
+}
+
+.description {
+    font-size: 1.2em;
+    color: #8f7c7c;
+    margin-bottom: 20px;
+}
+
+.crossword-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(15, 50px);
+    grid-template-rows: repeat(15, 50px);
+    grid-gap: 4px;
+    justify-content: center;
+}
+
+.grid input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #e3c2c2;
+    background-color: #fef7f7;  /* Light pink */
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.grid input.correct {
+    background-color: #c0f9d5;  /* Pastel green for correct answers */
+    transform: scale(1.1);
+}
+
+.grid input.incorrect {
+    background-color: #f5d6d6;  /* Soft red for incorrect answers */
+    transform: scale(1.1);
+}
+
+.clues {
+    margin: 0 20px;
+    text-align: left;
+    font-size: 1.1em;
+    color: #6f6b6b;
+    flex: 1;
+}
+
+button {
+    background-color: #6d9e7d;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #5a7b64;
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #d47f4f;
+}
