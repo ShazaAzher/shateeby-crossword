@@ -1,126 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shateeby Crossword</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Body Styling */
-        body {
-            font-family: 'Press Start 2P', cursive;
-            background-color: #f9f3f3;  /* Soft pink background */
-            color: #5c7a65;
-            text-align: center;
-            padding: 50px;
-            margin: 0;
-        }
-
-        /* Container Styling */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff3f3;
-            border-radius: 15px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 4em;
-            color: #f7b2b2;  /* Light pink title */
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .description {
-            font-size: 1.5em;
-            color: #6f6b6b;
-            margin-bottom: 30px;
-        }
-
-        /* Crossword container */
-        .crossword-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        iframe {
-            width: 80vw;
-            height: 70vh;
-            max-width: 800px;
-            max-height: 600px;
-            border: 3px solid #f7b2b2;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        iframe:hover {
-            transform: scale(1.05);
-        }
-
-        /* Button Styling */
-        button {
-            background-color: #6d9e7d;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-            margin-bottom: 30px;
-        }
-
-        button:hover {
-            background-color: #5a7b64;
-            transform: scale(1.05);
-        }
-
-        /* Result Text */
-        #result {
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #d47f4f;
-        }
-
-        /* Media Query for Smaller Screens */
-        @media (max-width: 768px) {
-            iframe {
-                width: 90vw;
-                height: 60vh;
-            }
-
-            .description {
-                font-size: 1.2em;
-            }
-
-            h1 {
-                font-size: 3em;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Shateeby Crossword</h1>
-        <div class="crossword-container">
-            <br>
-            <iframe width="800" height="600" style="border:3px solid #f7b2b2; border-radius:10px" frameborder="0" src="https://crosswordlabs.com/embed/shateeby"></iframe>
-        </div>
-
-        <button id="check-answers">Check Answers</button>
-        <div id="result"></div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,225 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shateeby Crossword</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        /* Body Styling */
-        body {
-            font-family: 'Press Start 2P', cursive;
-            background-color: #f9f3f3;  /* Soft pink background */
-            color: #5c7a65;
-            text-align: center;
-            padding: 50px;
-            margin: 0;
-        }
-
-        /* Container Styling */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff3f3;
-            border-radius: 15px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 4em;
-            color: #f7b2b2;  /* Light pink title */
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .description {
-            font-size: 1.5em;
-            color: #6f6b6b;
-            margin-bottom: 30px;
-        }
-
-        /* Crossword grid */
-        .crossword-grid {
-            display: grid;
-            grid-template-columns: repeat(15, 40px);
-            grid-template-rows: repeat(15, 40px);
-            gap: 5px;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .cell {
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            border: 1px solid #f7b2b2;
-            background-color: #fff;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #6f6b6b;
-            box-sizing: border-box;
-        }
-
-        .cell input {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            font-size: 1.5em;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            font-weight: bold;
-            color: #5c7a65;
-        }
-
-        /* Button Styling */
-        button {
-            background-color: #6d9e7d;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-            margin-bottom: 30px;
-        }
-
-        button:hover {
-            background-color: #5a7b64;
-            transform: scale(1.05);
-        }
-
-        /* Result Text */
-        #result {
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #d47f4f;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
         <h1>Shateeby Crossword</h1>
-        <p class="description">Fill in the crossword puzzle with answers based on the clues provided! Click the button below to check your answers.</p>
-
-        <div class="crossword-grid" id="crossword-grid">
-            <!-- Crossword grid will be dynamically generated here -->
+        <p class="description">Have fun teeby!</p>
+        <div class="crossword-layout">
+            <div class="clues across">
+              <h2>Across</h2>
+              <ul>
+                <li data-row="0" data-col="4" class="clue"><strong>5.</strong>"_ ____ ___,bye"</li>
+                <li data-row="0" data-col="6" class="clue"><strong>6.</strong>the first gift you gave me</li>
+                <li data-row="0" data-col="8" class="clue"><strong>7.</strong>my favourite dish you make</li>
+                <li data-row="0" data-col="10" class="clue"><strong>10.</strong>my favourite thing to do to you</li>
+                <li data-row="1" data-col="4" class="clue"><strong>12.</strong>our (only) game</li>
+                <li data-row="5" data-col="0" class="clue"><strong>14.</strong>my favourite nickname for you</li>
+                <li data-row="8" data-col="0" class="clue"><strong>15.</strong>book i read to you when you were sleeping on my lap</li>
+              </ul>
+            </div>
+        
+            <div class="grid"></div>
+        
+            <div class="clues down">
+              <h2>Down</h2>
+              <ul>
+                <li data-row="0" data-col="4" class="clue"><strong>1.</strong>your favourite dish that i make</li>
+                <li data-row="0" data-col="6" class="clue"><strong>2.</strong>your favourite childhood book</li>
+                <li data-row="0" data-col="8" class="clue"><strong>3.</strong>the first word I’d use to describe you</li>
+                <li data-row="0" data-col="10" class="clue"><strong>4.</strong>a car we both will have when we are rich</li>
+                <li data-row="1" data-col="4" class="clue"><strong>8.</strong>our favourite thing to do together</li>
+                <li data-row="5" data-col="0" class="clue"><strong>9.</strong>our song (i think)</li>
+                <li data-row="8" data-col="0" class="clue"><strong>11.</strong>your favourite way to eat</li>
+                <li data-row="8" data-col="10" class="clue"><strong>13.</strong>The month we became “us”</li>
+              </ul>
+            </div>
         </div>
+        <button id="checkBtn" class="pixel-btn">ok check check check check</button>
+        <button id="see-solution" class="pixel-btn">give up hehehe</button>
 
-        <button id="check-answers">Check Answers</button>
-        <div id="result"></div>
+        <div id="loveLetter" class="love-letter">
+            <p>Dear ateeby,</p> 
+            <p>you are the love of my life. I am so proud of you.</p> <p>Forever your's, Sheezu</p>
+            <button onclick="document.getElementById('loveLetter').style.display='none'" class="pixel-btn">Close</button>
+          </div>
+          
     </div>
 
-    <script>
-        // Clues and Answers
-        const clues = {
-            down: {
-                1: "your favourite dish that i make",
-                2: "your favourite childhood book",
-                3: "The first word I’d use to describe your heart",
-                4: "car we both will have when we are rich",
-                8: "our favourite thing to do together",
-                9: "our song (i think)",
-                11: "your favourite way to eat",
-                13: "The month we became “us”",
-            },
-            across: {
-                5: "The three-word phrase that means everything",
-                6: "The first gift you gave me",
-                7: "my favourite dish you make",
-                10: "my favourite thing to do to you",
-                12: "our (only) game",
-                14: "my favourite nickname",
-                15: "book i read to you when you were sleeping on my lap",
-            }
-        };
-
-        const answers = {
-            1: "pinkpasta",
-            2: "boy",
-            3: "gentle",
-            4: "porsche",
-            5: "iloveyou",
-            6: "lieta",
-            7: "riceandspice",
-            8: "cuddle",
-            9: "sick",
-            10: "pizzahand",
-            11: "autism",
-            12: "stardew",
-            13: "december",
-            14: "atweebs",
-            15: "thelittleprince"
-        };
-
-        // Create the crossword grid
-        function generateGrid() {
-            const gridSize = 15;
-            const grid = [];
-            
-            for (let i = 0; i < gridSize; i++) {
-                const row = [];
-                for (let j = 0; j < gridSize; j++) {
-                    row.push('');
-                }
-                grid.push(row);
-            }
-
-            // Place words in the grid (simplified)
-            grid[0][0] = "p"; // Example of where the word starts
-            grid[0][1] = "i";
-            grid[0][2] = "n";
-            grid[0][3] = "k";
-            grid[0][4] = "p";
-            grid[0][5] = "a";
-            grid[0][6] = "s";
-            grid[0][7] = "t";
-            grid[0][8] = "a";
-
-            // Fill the grid with cells
-            const crosswordGrid = document.getElementById('crossword-grid');
-            grid.forEach((row, rowIndex) => {
-                row.forEach((cell, colIndex) => {
-                    const cellElement = document.createElement('div');
-                    cellElement.classList.add('cell');
-                    const input = document.createElement('input');
-                    input.maxLength = 1;
-                    input.dataset.row = rowIndex;
-                    input.dataset.col = colIndex;
-                    cellElement.appendChild(input);
-                    crosswordGrid.appendChild(cellElement);
-                });
-            });
-        }
-
-        // Check answers function
-        function checkAnswers() {
-            const inputs = document.querySelectorAll('.cell input');
-            let correct = 0;
-            inputs.forEach((input) => {
-                const row = input.dataset.row;
-                const col = input.dataset.col;
-                const cellValue = input.value.toLowerCase();
-                const correctValue = answers[(row * 15 + col) + 1];
-
-                if (cellValue === correctValue) {
-                    correct++;
-                    input.style.backgroundColor = '#c0f7c0'; // Green for correct
-                } else {
-                    input.style.backgroundColor = '#f7c0c0'; // Red for wrong
-                }
-            });
-
-            const result = document.getElementById('result');
-            result.textContent = `You got ${correct} out of 15 answers correct!`;
-        }
-
-        // Initialize the crossword grid
-        generateGrid();
-
-        // Event listener for checking answers
-        document.getElementById('check-answers').addEventListener('click', checkAnswers);
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
